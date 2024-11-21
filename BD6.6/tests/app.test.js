@@ -22,8 +22,7 @@ describe("Controller Function tests",()=>{
     jest.clearAllMocks();
   });
   it("should return all employees",() =>{
-    let mockedeEmployees = 
-    let employees = [
+    let mockedeEmployees =  [
       {
           employeeId: 1,
           name: 'Rahul Sharma',
@@ -54,11 +53,11 @@ describe("Controller Function tests",()=>{
 });
 
 describe("API Endpoint tests",()=>{
-  it("GET /employees should get all employees",async()=>{
+  it("GET /employees should get all employees",async ()=>{
     const res= await request(server).get("/employees");
     expect(res.status).toBe(200);
     expect(res.body).toEqual({
-      employees: [
+      employees : [
         {
             employeeId: 1,
             name: 'Rahul Sharma',
@@ -80,7 +79,7 @@ describe("API Endpoint tests",()=>{
             departmentId: 1,
             roleId: 3,
         },
-      ];
+      ],
     });
     expect(res.body.employees.length).toBe(3);
   });
@@ -89,12 +88,12 @@ describe("API Endpoint tests",()=>{
     const res = await request(server).get("/employees/details/1");
     expect(res.status).toBe(200);
     expect(res.body).toEqual({
-      employee:{
+      employee: {
         employeeId:1,
         name:"Rahul Sharma",
         email:"rahul.sharma@example.com",
         departmentId:1,
-        roledId:1,
+        roleId:1,
       },
     });
   });
