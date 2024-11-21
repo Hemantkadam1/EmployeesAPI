@@ -9,7 +9,7 @@ app.use(express.json());
 
 //Endpoint to get all employees
 app.get("/employees",async(req,res)=>{
-  const employees = getAllEmployees();
+  const employee = getAllEmployees();
   res.json({employee});
 });
 //Endpoint to get employee details by id
