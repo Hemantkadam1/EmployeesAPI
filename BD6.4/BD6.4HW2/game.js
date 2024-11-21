@@ -18,7 +18,7 @@ function getGames()
 }
 function getAllGenres()
 {
-  return genres();
+  return genres;
 }
 function getGenreById(id)
 {
